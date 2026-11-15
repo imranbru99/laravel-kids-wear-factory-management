@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Fraunces', ui-serif, Georgia, serif;
+    --color-ink: #1c2430;
+    --color-cream: #f4efe6;
+    --color-paper: #fbf8f2;
+    --color-coral: #e15b3a;
+    --color-leaf: #21584a;
+    --color-sand: #e7dcc8;
+    --color-mist: #d7e3dc;
+}
+
+body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+}
+
+.display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+}
+
+.swatch {
+    background:
+        radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.62), transparent 36%),
+        radial-gradient(circle at 82% 88%, rgba(28, 36, 48, 0.18), transparent 42%),
+        linear-gradient(145deg, var(--swatch-a, #e15b3a), var(--swatch-b, #21584a));
+}
+
+.hero-stage {
+    background:
+        radial-gradient(ellipse 70% 50% at 88% 8%, rgba(225, 91, 58, 0.16), transparent 60%),
+        radial-gradient(ellipse 55% 45% at 8% 90%, rgba(33, 88, 74, 0.14), transparent 62%),
+        linear-gradient(180deg, #fffdf9 0%, var(--color-paper) 70%);
+}
+
+.grain {
+    background-image: radial-gradient(rgba(28, 36, 48, 0.045) 0.6px, transparent 0.6px);
+    background-size: 3px 3px;
+}
+
+.look-float {
+    box-shadow: 0 30px 70px -36px rgba(28, 36, 48, 0.55);
+}
+
+.marquee-track {
+    animation: marquee 36s linear infinite;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
